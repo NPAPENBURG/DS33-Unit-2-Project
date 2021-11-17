@@ -1,0 +1,8 @@
+dash
+Flask
+joblib
+pandas
+gunicorn
+dash
+sklearn
+category_encoders
