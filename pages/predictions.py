@@ -5,13 +5,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import pandas as pd
-import pickle
+from joblib import load
 # Imports from this application
 from app import app
 
 
-pickin = open('pages/pipeline.p','rb')
-pipeline = pickle.load(pickin)
+with open(f'pipeline.joblib', 'rb') as f:
+    pipeline = load(f)
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
